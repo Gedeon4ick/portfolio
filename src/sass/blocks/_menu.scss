@@ -1,0 +1,20 @@
+.humburger{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:flex-end;
+    cursor: pointer;
+    span{
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: #151812;
+    }
+    span.long{
+        width: 36px;
+    }
+}
