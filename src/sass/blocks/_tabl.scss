@@ -1,0 +1,41 @@
+.tabl{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, auto));
+    grid-template-rows: repeat(auto-fill, minmax(70px, auto));
+    column-gap: 45px;
+    row-gap: 30px;
+    &__wrapper{
+        width: 350px;
+        height: 70px;
+        position: relative;
+        &_title{
+            padding-left: 15px;
+            @include before_circle;
+            &:before{
+                top: -8px;
+            }
+        }
+        &_scale{
+            margin-top: 27px;
+            width: 350px;
+            height: 14px;
+            background: $main-color;
+            border-radius: 4px;
+        }
+        &_procent{
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-weight: 500;
+        }
+        &-none{
+            margin-top: 27px;
+            width: 350px;
+            height: 14px;
+            background: #E8E4DE;
+            border-radius: 4px;
+        }
+    }
+
+
+}
