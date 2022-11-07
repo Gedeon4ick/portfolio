@@ -1,0 +1,51 @@
+.price{
+
+    padding: 120px;
+    &__title{
+        text-align: center;
+        position: relative;
+        @include before_circle;
+        &:before{
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__subtitle{
+        text-align: center;
+    }
+    &__wrapper{
+        margin-top: 60px;
+        padding-left: 24px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(366px, auto));
+        grid-template-rows: repeat(3, minmax(44px, auto));
+        grid-auto-rows: auto;
+        gap: 5px;
+        justify-content: space-between;
+
+        &_card{
+            position: relative;
+            &-title{
+                @include before_circle;
+                &:before{
+                    width: 15px;
+                    height: 15px;
+                    top: 3px;
+                    left: -25px;
+                }
+            }
+            &-descr{
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 18px;
+                color: #000000;
+            }
+            &-subtitle{
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+
+    }
+}
