@@ -462,18 +462,24 @@
 
                     <form action="#" class="contacts__wrapper_descr-form">
                         <div class="contacts__wrapper_descr-form-input">
-                            <input id="name" type="text">
+                            <input required id="name" type="text">
                             <label for="name">Ваше имя</label>
                         </div>
                         <div class="contacts__wrapper_descr-form-input">
-                            <input name="email" id="email" type="email">
+                            <input required name="email" id="email" type="email">
                             <label for="email">Ваша почта</label>
                         </div>
                         <div class="contacts__wrapper_descr-form-textarea">
                             <textarea name="text" id="text"> </textarea>
                             <label for="text">Ваше сообщение</label>
                         </div>
-                        <div><button class="contacts__btn btn">Отправить сообщение</button></div>
+                        <div class="contacts__trigger">
+                            <button class="contacts__btn btn">Отправить сообщение</button>
+                            <div class="contacts__trigger_policy">
+                                <input required type="checkbox">
+                                <span>Я согласен(а) с <a href="#">политикой конфиденциальности</a></span>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
