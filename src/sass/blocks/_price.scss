@@ -1,6 +1,6 @@
 .price{
 
-    padding: 120px;
+    padding-top: 120px;
     &__title{
         text-align: center;
         position: relative;
@@ -14,8 +14,9 @@
         text-align: center;
     }
     &__wrapper{
+
         margin-top: 60px;
-        padding-left: 24px;
+        padding-left: 75px;
         display: grid;
         grid-template-columns: repeat(2, minmax(366px, auto));
         grid-template-rows: repeat(3, minmax(44px, auto));

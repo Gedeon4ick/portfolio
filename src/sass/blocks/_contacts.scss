@@ -1,18 +1,55 @@
-.contacts{
-    &__img{
-       img{
-        // width: 400px;
-        height: 600px;
-       }
-    }
-    &__links{
-        a{
-            width: 30px;
-            height: 30px;
-            img{
-                width: 30px;
-                height: 30px;
+.contacts {
+    padding: 0 0 90px 0;
+
+    &__wrapper {
+        padding: 0 35px 0 52px;
+        display: grid;
+        grid-template-columns: 400px 585px;
+        justify-content: space-between;
+
+        &_descr {
+            &-title {
+                position: relative;
+                padding-left: 12px;
+                @include before_circle;
+            }
+            &-form{
+                margin-top: 30px;
+            }
+            &-links {
+                
+                &-link {
+                    margin-right: 25px;
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                    }
+                    &:hover{
+                        text-decoration: none;
+                        svg path {
+                            transition: all 0.5s;
+                            fill: $main-color;
+                        }
+                    }
+                }
+            }
+            &-linkTitle{
+                margin-top: 20px;
+            }
+            &-links, &-text{
+                margin-top: 20px;
+            }
+            .divider{
+                margin: 0;
             }
         }
+
+        &_img {
+            img {
+                width: 100%;
+            }
+        }
+
     }
+
 }
