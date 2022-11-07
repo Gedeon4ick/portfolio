@@ -92,12 +92,36 @@
         bottom: 50px;
         left: 50%;
         transform: translateX(-50%);
+        transition: all 0.8s ease-in-out;
         .white{
+            svg path{
+                transition: all 0.5s;
+                &:hover{
+                    fill: #fff;
+                }
+            }
             &:hover{
-                box-shadow: 3px 3px 20px #fff;
+                transform: scale(1.2);
             }
         }
     }
+
+    // svg {
+    //     width: 30px;
+    //     height: 30px;
+    //     transition: all .5s ease-in-out;
+    //     &:hover{
+    //         transform: scale(1.2);
+    //     }
+    // }
+    // &:hover{
+    //     text-decoration: none;
+    //     svg path {    
+    //         transition: all 0.5s;
+    //         fill: $main-color;
+    //     }
+    // }
+
     &__overlay {
         position: fixed;
         top: 0;
