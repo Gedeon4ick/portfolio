@@ -4,6 +4,7 @@
     grid-template-rows: repeat(auto-fill, minmax(70px, auto));
     column-gap: 45px;
     row-gap: 30px;
+    justify-content: center;
     &__wrapper{
         width: 350px;
         height: 70px;
@@ -19,8 +20,14 @@
             margin-top: 27px;
             width: 350px;
             height: 14px;
-            background: $main-color;
+            background-color: #E8E4DE;
             border-radius: 4px;
+            span{
+                display: block;
+                background: $main-color;
+                height: 100%;
+
+            }
         }
         &_procent{
             position: absolute;

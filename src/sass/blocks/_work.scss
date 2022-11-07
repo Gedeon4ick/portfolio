@@ -1,0 +1,15 @@
+.work{
+    padding: 120px;
+    &__title{
+        text-align: center;
+        position: relative;
+        @include before_circle;
+        &:before{
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__subtitle{
+        text-align: center;
+    }
+}
