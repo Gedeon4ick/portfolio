@@ -1,24 +1,25 @@
-@media (max-width: 1440px) {}
-
-@media (max-width: 1024px) {
-	.container {
-		max-width: 600px;
-
-	}
+@media (max-width: 1440px) {
 	.sidepanel {
 		display: none;
 	}
 	.promo {
-		padding: 150px 50px;
+		padding: 350px 50px;
 	}
+}
+	
+@media (max-width: 1024px) {
+	.container {
+		max-width: 700px;
+	}
+
 }
 
 @media (max-width: 767px) {
 	.container {
-		max-width: 525px;
+		max-width: 500px;
 		.title_fz48{
-			font-size: 25px;
-			line-height: 25px;
+			font-size: 35px;
+			line-height: 45px;
 		}
 	}
 	.promo {
@@ -36,7 +37,7 @@
 		}
 	}
 	.promo{
-		background: url(../img/bg_f.jpg) no-repeat center/cover;
+		background: url('../img/bg_f.jpg') no-repeat center/cover;
 		&__wrapper_btns{
 			margin-top: 35px;
 		}
@@ -55,8 +56,4 @@
 			bottom: 90px;
 		}
 	}
-}
-
-@media (max-width: 320px) {
-
 }
