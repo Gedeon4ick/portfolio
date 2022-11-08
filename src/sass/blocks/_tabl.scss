@@ -1,48 +1,50 @@
 .tabl{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, auto));
-    grid-template-rows: repeat(auto-fill, minmax(70px, auto));
-    column-gap: 45px;
-    row-gap: 30px;
-    justify-content: center;
     &__wrapper{
-        width: 350px;
-        height: 70px;
-        position: relative;
-        &_title{
-            padding-left: 15px;
-            @include before_circle;
-            &:before{
-                top: -8px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, auto));
+        grid-template-rows: repeat(auto-fill, minmax(70px, auto));
+        column-gap: 45px;
+        row-gap: 30px;
+        justify-content: center;
+        &_card{
+            width: 350px;
+            height: 70px;
+            position: relative;
+            &-title{
+                padding-left: 15px;
+                @include before_circle;
+                &:before{
+                    top: -8px;
+                }
+            }
+            &-scale{
+                margin-top: 27px;
+                width: 350px;
+                height: 14px;
+                background-color: #E8E4DE;
+                border-radius: 4px;
+                span{
+                    display: block;
+                    background: $main-color;
+                    height: 100%;
+    
+                }
+            }
+            &-procent{
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-weight: 500;
+            }
+            &-none{
+                margin-top: 27px;
+                width: 350px;
+                height: 14px;
+                background: #E8E4DE;
+                border-radius: 4px;
             }
         }
-        &_scale{
-            // position: relative;
-            margin-top: 27px;
-            width: 350px;
-            height: 14px;
-            background-color: #E8E4DE;
-            border-radius: 4px;
-            span{
-                display: block;
-                background: $main-color;
-                height: 100%;
-
-            }
-        }
-        &_procent{
-            position: absolute;
-            top: 0;
-            right: 0;
-            font-weight: 500;
-        }
-        &-none{
-            margin-top: 27px;
-            width: 350px;
-            height: 14px;
-            background: #E8E4DE;
-            border-radius: 4px;
-        }
+       
     }
 
 

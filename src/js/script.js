@@ -11,8 +11,8 @@ close.addEventListener('click', () => {
 });
 
 
-const procents =  document.querySelectorAll('.tabl__wrapper_procent'),
-    scales = document.querySelectorAll('.tabl__wrapper_scale span');
+const procents =  document.querySelectorAll('.tabl__wrapper_card-procent'),
+    scales = document.querySelectorAll('.tabl__wrapper_card-scale span');
 
 procents.forEach( (item, i) => {
     scales[i].style.width = item.innerHTML;

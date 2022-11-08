@@ -4,31 +4,51 @@
     background: url('../img/bg_f.jpg') no-repeat right/cover; 
     padding: 205px;
     
-    &__title{
-        margin-top: 10px;
-        max-width: 535px;
-    }
-    &__subtitle {
-        position: relative;
-        z-index: 2;
-        @include before_circle;
-        padding-left: 10px;
-    }    
-    &__btns {
-        margin-top: 25px;
-        display: flex;
-        width: 250px; 
-        align-items: center;
-        justify-content: space-between;
-    }
-    &__link{
-        font-weight: bold;
-        color: #fff;
-        &:hover {
-            color: #fff;
-            text-decoration: none;
+    &__wrapper{
+        &_title{
+            margin-top: 10px;
+            max-width: 535px;
         }
+        &_subtitle {
+            position: relative;
+            z-index: 2;
+            @include before_circle;
+            padding-left: 10px;
+        }    
+        &_btns {
+            margin-top: 25px;
+            display: flex;
+            width: 250px; 
+            align-items: center;
+            justify-content: space-between;
+            &-link{
+                font-weight: bold;
+                color: #fff;
+                &:hover {
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+            &-btn{
+                height: 45px;
+                background: $main-color;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+                padding: 10px 25px;
+                font-weight: bold;
+                color: #fff;
+                &:hover {
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+        
     }
 
+}
+.menu{
+    &__social{
+        bottom: 80px;
+    }
 }
 // center (center / cover ) no-repeat
