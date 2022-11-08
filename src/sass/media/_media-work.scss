@@ -1,0 +1,16 @@
+
+@media (max-width: 425px) {
+    .container{
+        max-width: 400px;
+    }
+    .skill{
+        padding: 40px 23px 0 23px;
+        .title_fz36{
+            font-size: 24px;
+            line-height: 36px;
+        }
+        &__wrapper{
+            margin-top: 20px;
+        }
+    }
+}
