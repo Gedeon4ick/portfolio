@@ -1,16 +1,30 @@
+@media (max-width: 1440px) {
+	.container {
+		max-width: 1040px;
+	}
 
-@media (max-width: 425px) {
-    .container{
-        max-width: 400px;
-    }
-    .skill{
-        padding: 40px 23px 0 23px;
-        .title_fz36{
-            font-size: 24px;
-            line-height: 36px;
-        }
-        &__wrapper{
-            margin-top: 20px;
-        }
-    }
+	.work {
+		&__wrapper {
+			gap: 10px;
+			.ipad {
+				grid-row: unset;
+				grid-column: unset;
+				img{
+					width: 100%;
+					height: 280px;
+					object-fit: cover;
+				}
+			}
+			.plans{
+				grid-row: unset;
+				grid-column: unset;
+				img{
+					width: 100%;
+					height: 280px;
+					object-fit: cover;
+				}
+			}
+		}
+	}
 }
+
