@@ -18,26 +18,27 @@
         &_btns {
             margin-top: 25px;
             display: flex;
-            width: 250px; 
+            max-width: 400px; 
             align-items: center;
-            justify-content: space-between;
-            &-link{
-                font-weight: bold;
-                color: #fff;
-                &:hover {
-                    color: #fff;
-                    text-decoration: none;
-                }
-            }
+            justify-content: flex-start;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            transition: all 0.5s;
+            gap: 20px;
+            text-align: center;
+         
             &-btn{
+                width: 140px;
                 height: 45px;
-                background: $main-color;
+                // background: transparent;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
                 padding: 10px 25px;
                 font-weight: bold;
                 color: #fff;
+                transition: all 0.5s;
+                border-radius: 5px;
                 &:hover {
                     color: #fff;
+                    background-color: $main-color;
                     text-decoration: none;
                 }
             }
