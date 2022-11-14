@@ -22,7 +22,7 @@
             align-items: center;
             justify-content: flex-start;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-            transition: all 0.5s;
+            transition: all 0.5s ease-in-out;
             gap: 20px;
             text-align: center;
          
@@ -34,13 +34,14 @@
                 padding: 10px 25px;
                 font-weight: bold;
                 color: #fff;
-                transition: all 0.5s;
+                transition: all 0.5s ease-in-out;
                 border-radius: 5px;
                 &:hover {
                     color: #fff;
                     background-color: $main-color;
                     text-decoration: none;
                 }
+        
             }
         }
         
