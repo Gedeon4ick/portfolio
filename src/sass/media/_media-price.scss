@@ -11,7 +11,7 @@
 
     .price {
         &__wrapper {
-            padding: 0px 8px;
+            padding: 0px 60px;
             grid-template-columns: repeat(2, minmax(266px, auto));
             grid-template-rows: repeat(3, minmax(44px, auto));
         }
@@ -45,7 +45,9 @@
     }
 
     .price {
+        padding-top: 40px;
         &__wrapper {
+            margin-top: 17px;
             padding: 0px 8px;
             grid-template-columns: 246px;
             // grid-template-rows: repeat(3,minmax(44px,auto));
