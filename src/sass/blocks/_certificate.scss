@@ -1,0 +1,16 @@
+.certificate {
+    h2 {
+        margin-top: 60px;
+    }
+    .wrapper {
+        margin-top: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+        .wrapper__item {
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
