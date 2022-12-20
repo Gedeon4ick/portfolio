@@ -1,0 +1,59 @@
+@media (max-width: 1100px) {
+    .certificate {
+        .offer {
+            &__counter {
+                &_prev {
+                    svg {
+                        // position: absolute;
+                        width: 36px;
+                    }
+                }
+
+                &_next {
+                    svg {
+                        width: 36px;
+                    }
+                }
+
+                &:first-child {
+                    left: 8px;
+                }
+
+                &:nth-child(2) {
+                    right: 8px;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .certificate {
+        .offer {
+            &__counter {
+                &_prev {
+                    svg {
+                        // position: absolute;
+                        width: 26px;
+                    }
+                }
+
+                &_next {
+                    svg {
+                        width: 26px;
+                    }
+                }
+
+                &:first-child {
+                    left: 8px;
+                }
+
+                &:nth-child(2) {
+                    right: 8px;
+                }
+
+            }
+        }
+    }
+}

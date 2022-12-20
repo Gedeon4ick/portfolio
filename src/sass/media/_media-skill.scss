@@ -1,5 +1,5 @@
 
-@media (max-width: 500px) {
+@media (max-width: 1088px) {
     .container{
         max-width: 400px;
     }
@@ -11,6 +11,16 @@
         }
         &__wrapper{
             margin-top: 20px;
+            display: none;
+
+            &.slick {
+                display: block;
+            }
+    
+            &_card {
+                display: block !important;
+                margin: auto ;
+            }
         }
     }
 }

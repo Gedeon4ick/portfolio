@@ -73,6 +73,7 @@
      
         overflow: hidden;
         &__slides {
+            cursor: pointer;
             display: flex;
             transition: all 0.5s;
             &_slide {

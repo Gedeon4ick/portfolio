@@ -126,6 +126,7 @@ slides.forEach(slide => {
 
 
 
+
 const indicators = document.createElement('ol');
 
 const dots = [];
@@ -143,7 +144,8 @@ for (let i = 0; i < slides.length; i++) {
     indicators.append(dot);
     dots.push(dot);
 }
-next.addEventListener('click', () => {
+
+function toNext() {
     if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
         offset = 0;
     } else {
@@ -161,9 +163,13 @@ next.addEventListener('click', () => {
 
     dots.forEach(dot => dot.style.opacity = '.5');
     dots[slideIndex - 1].style.opacity = 1;
+}
+
+next.addEventListener('click', () => {
+    toNext()
 });
 
-prev.addEventListener('click', () => {
+function toPrev() {
     if (offset == 0) {
         offset = +width.slice(0, width.length - 2) * (slides.length - 1);
     } else {
@@ -181,6 +187,10 @@ prev.addEventListener('click', () => {
 
     dots.forEach(dot => dot.style.opacity = '.5');
     dots[slideIndex - 1].style.opacity = 1;
+}
+
+prev.addEventListener('click', () => {
+    toPrev()
 });
 
 dots.forEach(dot => {
@@ -196,3 +206,59 @@ dots.forEach(dot => {
 
     });
 });
+
+slidesField.addEventListener('mousedown', e => {
+    const start = e.pageX;
+    slidesField.onmousemove = function(e) {
+        slidesField.onmouseup = function () {
+            if (e.pageX < start) {
+                toNext()
+            } else {
+                toPrev()
+            }
+            slidesField.onmousemove = null;
+            slidesField.onmouseup = null;
+        }
+
+        slidesField.ondragstart = function () {
+            return false;
+        };
+    }
+});
+
+slidesField.addEventListener('pointerdown', e => {
+    const start = e.clientX;
+    slidesField.onpointermove = function(e) {
+        const end = e.clientX;
+        if (end < start) {
+            toNext();
+        } else {
+            toPrev();
+        }
+        slidesField.onpointerup = function() {
+            slidesField.onpointermove = null;
+            slidesField.onpointerup = null;
+        }
+
+        slidesField.ondragstart = function () {
+            return false;
+        };
+    }
+});
+
+
+$('.slick').slick({
+    arrows: false,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 1,
+          }
+        },
+    ]
+  });

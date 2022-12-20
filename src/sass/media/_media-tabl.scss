@@ -1,11 +1,17 @@
 
+@media (max-width: 1088px) {
+    .tabl{
+        padding: 40px 23px 0 23px;
+
+    }
+}
+
+
 @media (max-width: 425px) {
     .container{
         max-width: 400px;
     }
     .tabl{
-        padding: 40px 23px 0 23px;
-       
         &__wrapper{
             margin-top: 40px;
             &_card{
