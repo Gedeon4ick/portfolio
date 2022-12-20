@@ -1,15 +1,85 @@
 .certificate {
+    padding-left: 50px;
+    padding-right: 50px;
     h2 {
         margin-top: 60px;
     }
-    .wrapper {
+
+    .offer {
+        position: relative;
+        &__counter{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 16;
+            &_prev {
+                svg {
+                    // position: absolute;
+                    width: 48px;
+                    path {
+                        fill: #FFA501;
+                    }
+                }
+            }
+            &_next {
+                svg {
+                    width: 48px;
+                    right: 0;
+                    path {
+                        fill: #FFA501;
+                    }
+                }
+            }
+            &:first-child {
+                left: -45px;
+            }
+            &:nth-child(2) {
+                right: -45px;
+            }
+            
+        }
+
+
+        .carousel-indicators {
+            position: absolute;
+            right: 0;
+            left: 0;
+            z-index: 15;
+            display: flex;
+            justify-content: center;
+            margin-right: 15%;
+            margin-left: 15%;
+            list-style: none;
+            li {
+                box-sizing: content-box;
+                flex: 0 1 auto;
+                width: 30px;
+                height: 6px;
+                margin-right: 3px;
+                margin-left: 3px;
+                cursor: pointer;
+                background-color: #FFA501;
+                background-clip: padding-box;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                opacity: .5;
+                transition: opacity .6s ease;
+            }
+        }
+    }
+
+    .wrapperSl {
         margin-top: 20px;
-        padding-left: 50px;
-        padding-right: 50px;
-        .wrapper__item {
-            img {
-                width: 100%;
-                object-fit: contain;
+     
+        overflow: hidden;
+        &__slides {
+            display: flex;
+            transition: all 0.5s;
+            &_slide {
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
             }
         }
     }
