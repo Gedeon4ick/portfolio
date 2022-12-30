@@ -1,0 +1,14 @@
+.skill {
+    &__wrapper {
+        display: none;
+
+        &.slick {
+            display: block;
+        }
+
+        &_card {
+            display: block !important;
+            margin: auto ;
+        }
+    }
+}

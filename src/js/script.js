@@ -207,44 +207,53 @@ dots.forEach(dot => {
     });
 });
 
-slidesField.addEventListener('mousedown', e => {
-    const start = e.pageX;
-    slidesField.onmousemove = function(e) {
-        slidesField.onmouseup = function () {
-            if (e.pageX < start) {
-                toNext()
-            } else {
-                toPrev()
+
+
+
+const widthNumber = +width.slice(0, width.length - 2);
+
+if (widthNumber > 720) {
+    slidesField.addEventListener('mousedown', e => {
+        const start = e.pageX;
+        slidesField.onmousemove = function (e) {
+            slidesField.onmouseup = function () {
+                if (e.pageX < start) {
+                    toNext()
+                } else {
+                    toPrev()
+                }
+                slidesField.onmousemove = null;
+                slidesField.onmouseup = null;
             }
-            slidesField.onmousemove = null;
-            slidesField.onmouseup = null;
-        }
 
-        slidesField.ondragstart = function () {
-            return false;
-        };
-    }
-});
-
-slidesField.addEventListener('pointerdown', e => {
-    const start = e.clientX;
-    slidesField.onpointermove = function(e) {
-        const end = e.clientX;
-        if (end < start) {
-            toNext();
-        } else {
-            toPrev();
+            slidesField.ondragstart = function () {
+                return false;
+            };
         }
-        slidesField.onpointerup = function() {
-            slidesField.onpointermove = null;
-            slidesField.onpointerup = null;
-        }
+    });
+} else {
+    slidesField.addEventListener('pointerdown', e => {
+        const start = e.clientX;
+        slidesField.onpointermove = function (e) {
+            const end = e.clientX;
+            if (end < start) {
+                toNext();
+            } else {
+                toPrev();
+            }
+            slidesField.onpointerup = function () {
+                slidesField.onpointermove = null;
+                slidesField.onpointerup = null;
+            }
 
-        slidesField.ondragstart = function () {
-            return false;
-        };
-    }
-});
+            slidesField.ondragstart = function () {
+                return false;
+            };
+        }
+    });
+}
+
+
 
 
 $('.slick').slick({
@@ -253,12 +262,10 @@ $('.slick').slick({
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    responsive: [
-        {
-          breakpoint: 800,
-          settings: {
+    responsive: [{
+        breakpoint: 800,
+        settings: {
             slidesToShow: 1,
-          }
-        },
-    ]
-  });
+        }
+    }, ]
+});
