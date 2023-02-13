@@ -24,7 +24,9 @@
             transition: all 0.6s;
             &.app {
                 img {
-                    width: 99%;
+                    width: 280px;
+                    height: 280px;
+                    object-fit: cover;
                 }
             }
             &.school {
